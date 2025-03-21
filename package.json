@@ -1,0 +1,15 @@
+{
+  "name": "prodam-garazh",
+  "version": "0.0.1",
+  "description": "my favourite pet project as of today",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "html",
+    "css"
+  ],
+  "author": "me",
+  "license": "ISC"
+}
