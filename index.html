@@ -18,7 +18,7 @@
             font-family: "Comic Sans MS", cursive;
             font-size: 44px;
             white-space: nowrap;
-            animation: slideText 3s ease-in-out infinite;
+            animation: slideText 4.5s ease-in-out infinite;
             position: relative;
         }
 
@@ -27,9 +27,7 @@
                 transform: translateX(100vw);
                 opacity: 1;
             }
-           
-       
-            
+        
             100% {
                 transform: translateX(-100vw);
                 opacity: 1;
@@ -41,5 +39,25 @@
     <div class="centered-div">
         ПРОДАМ ГАРАЖ
     </div>
+    <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the div element
+        const textDiv = document.querySelector('.centered-div');
+        
+        // Get text from URL parameter (default: "ПРОДАМ ГАРАЖ")
+        const text = getQueryParam('text') || 'ПРОДАМ ГАРАЖ';
+        
+        // Get color from URL parameter (default: black)
+        const color = getQueryParam('color') || 'black';
+        
+        // Update the text and color
+        textDiv.textContent = decodeURIComponent(text);
+        textDiv.style.color = color;
+    </script>
 </body>
 </html> 
